@@ -1,0 +1,165 @@
+/* 
+    padding
+ist die erste Box um das Geschriebene.
+"innenabstand"
+1. Background-color:Farbe erzeugen
+2. Padding verändern:
+padding-top/bottom/left/right: AnzPixel px;
+
+--- 
+
+display:block; Für block Optik wie bei Code
+
+--- 
+
+    Border
+Grenze die um unseren innenabstand geht.
+Etwas komplizierter als Padding.
+Auswahlmöglichkeiten:
+color / style (vorgefertigt z.B. dashed) / width 
+
+ 
+
+Borderstyles: https://developer.mozilla.org/de/docs/Web/CSS/border-style
+bsp.: 
+border: 5px dotted black; <- alle Befehle zusammen
+Pixel, Style, Farbe
+
+für nur linken Rand z.B.:
+border-left: 5px dotted green;
+
+---
+
+    Margin
+Unsichtbarer Bereiche der Abstand zwischen einem und dem nächsten Inhalt erzeugt.
+margin: 20px; <- außenabstand von 20 Pixeln in alle Richtungen
+Einzelne Seiten auch einstellbar:
+margin-top:10px;
+
+---
+
+    Schrift:
+font-family: Arial, Helvetica, sans-serif; Schriftart
+font-size: 14px;  Größe
+font-weight:lighter/bold; Schriftdicke
+font-style:italic; kursiv
+
+Alternativ zu Fett und kursiv <b> <i> in HTML direkt
+
+---
+
+    width/height
+Kann in Pixel oder Prozent definiert werden.
+50% nimmt die Hälfte des Bildschirms ein
+
+background-color:yellow;
+width:50%;
+height:40px;
+border:5px solice black;
+
+erzeugt eine gelbe Box mit schwarzem Rand, die sich über den halben Bildschirm streckt
+
+---
+
+    Links
+Hat 4 Zustände:
+- Noch nie besucht (link)
+- Nach dem draufklicken (active)
+- beim Hovern (hover)
+- Nach dem Besuch (visited)
+a:link      hier halt eingeben was wo gemacht werden soll
+{
+  color:yellow;
+  oder was auch immer
+}
+
+---
+
+    Tabellen stylen
+table   
+<!-- "oberstes Gesetz" Alle Unterebenen Übernehmen das SOLANGE sie nicht selbst weiter definiert wurden. -->
+{
+  border: xyz;
+  background-color:blau;  hinterste Hintergrund ist blau
+}
+
+tr
+{
+  background-color:rot; einzeln blöcke sind rot
+}
+
+td
+{
+  background-color:yellow; tablerow wird nicht beinflusst. Data wird gelb
+}
+
+---
+
+    Stylen von mehreren Elementen
+Zu stylende Elemente durch Komma trennen.
+main, article
+{
+  wasauchimmer
+}
+Nimmt sowohl für main als auch article die Gesetze in der Klammer an
+
+---
+
+    Hintergrundbild
+background-image: url(https://cdn.pixabay.com/photo/2020/02/15/14/33/network-4851120_1280.jpg);
+in den body. Stretchen mit: 
+
+---
+
+    Absolute Positionierung
+Orientiert sich an der oberen linken Ecke
+position:absolute;
+top XYZpx
+
+---
+
+    relative positionierung
+orientiert sich daran, wo der Text im normalfall stehen würde und verschiebt dann
+position:relaitve;
+
+---
+
+    fixe positionierung
+Verändert sich auch beim Scrollen nicht. Wie das Hintergrundbild
+Wird oft bei Werbung verwender
+position:fixed;
+
+---
+
+    Child selector
+ul > li (color:red)
+"alle Kinder von UL und die LI enthalten werden rot"
+
+
+---
+
+    Durchsichtigkeit
+Nach farbe rgb einfach ein weiteres komma und dann 0.5 für 50% oder so
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+

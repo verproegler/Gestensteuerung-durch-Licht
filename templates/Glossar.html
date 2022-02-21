@@ -1,0 +1,93 @@
+Fragen:
+
+1   warum klappt das mit dem IF nicht?
+    -> das Problem ist der Integer wert von "age"
+
+2   wie wichtig sind p tags? muss ich die nehmen, wenn ich alles mit main mache?
+
+
+5   Warum funktionieren die Random Planet Facts nicht und wie outsource ich das script?
+
+
+
+
+<!doctype html>                                            <!-- Start des Dokuments -->
+<html lang="de">                                           <!-- Sprache oder so -->
+<meta charset="UTF-8">                                     <!-- Die geladene Zeichentabelle -->
+<link rel="stylesheet" href="style.css">                   <!-- Referenz zum CSS Stylesheet -->
+<!-- Das kam alles in den Head, der Rest in den Body -->
+
+<p>                                                        <!-- Wird Tag genannt, was da in den <> steht -->
+
+<ul>                                                       <!-- hat keine Zahl davor-->
+  <li> unordered list </li>
+</ul>                                
+
+<ol>                                                       <!-- geordnete Liste zählt hoch und fängt mit 1 an-->
+  <li> ordered List </li>
+</ol>
+                                                           
+<a href="link" target="blank">Angezeigter Name.</a>        <!-- target="black" öffnet neuen Tab -->
+
+<videos> aus Youtube </videos>                             <!-- Rechtsklick auf ein Youtube Video und <> Einbettungscode kopieren und einfach in HTML posten. Richtig Easy -->
+
+<div style="text-align:center;"> Mittiger Text/Video/Wasauchimmer 
+</div> <!-- richtet Text mittig aus -->
+
+<b> Fett </b>
+<i> Kursiv </i>
+
+<br /> tr ist tablerow - Tabellenreihe. th wiederum bedeutet tablehead. Unsere Überschriften quasi
+<table border="1=" width="600"> <!-- border = dicke von einem Pixel als Rand um die Tabelle-->
+
+  <tr> 
+    <th>Erste Reihe</th>
+    <th>Zweite Reihe</th>
+    <th>Dritte Reihe</th>
+  </tr>
+
+  <!-- als nächstes kommt td für tabledate-->
+  <tr>
+    <td>Erste Daten</td>
+    <td>Erste Daten</td>
+    <td>Erste Daten</td>
+  </tr>
+
+  <tr>
+    <td>Erste Daten</td>
+    <td>Erste Daten</td>
+    <td>Erste Daten</td>
+  </tr>	
+
+</table>
+
+<figure>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Boxmodell-detail.png" 
+  width="500" 
+  height="350" 
+  alt="Das wird angezeigt, wenn das Bild nicht anzeigbar ist" 
+  title="Hovertext">
+  <figcaption> Text unter dem Bild </figcaption>
+</figure>
+
+<figure>
+  <img src="https://communicating.tuhh.de/api/v4/files/opqk4tqw9bgnbyfze9rb1x7egy/preview"
+  width="500"
+  height="350"
+  alt="Das wird angezeigt, wenn das Bild nicht anzeigbar ist"
+  title="Hovertext">
+  <figcaption> Text unter dem Bild </figcaption>
+</figure>
+<p id="diesdas">Sollte Rot sein. Ist es auch</p> <!-- Veraltet? IDs sind für einen einzigen Fall. Geht natürlich auch mit <span>. Span nutzen für mehrere Wörter/Sätze im Text. Zum ansprechen in CSS #diesdas{} -->
+
+<!-- Regeln in IDs haben höhere Priorität!! Sollte p also anders definiert sein als diesdas, wird diesdas angezeigt -->
+
+bei der URL können in Verbindung mit Flask Parameter abgefragt werden:
+127.0.0.1:500/Das-Projekt?name=Max&age=25   <!-- ? erzeugt Parameterabfrage. name muss als Variable in Python definiert sein. und in meiner HTML aufgerufen werden
+                                            & verbindet 2 Parameter Mehr dazu in der run.py oben beim import -->
+
+
+
+
+
+

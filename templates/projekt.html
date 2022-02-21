@@ -1,0 +1,33 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+
+<script src="/static/p5.min.js"></script>
+<script src="/static/p5.dom.min.js"></script>
+<script src="/static/ml5.js" type="text/javascript"></script>
+<script src="/static/p5.sound.js" type="text/javascript"></script>
+
+    <article class="canvas">
+      <h2>Das Projekt</h2>
+        <main id="canvas">
+          <p class="center" id="status">Loading model...</p>
+            <script src="sketch.js"></script>
+            <div class="center" id="sketch-holder"></div>   <!-- das sollte das Canvas positionieren. Tut es auch -->
+        </main>
+    </article>
+    <article>
+        <h2>Was genau passiert hier?</h2>
+        <main>
+            Damit hier überhaupt etwas passiert, brauchen wir den <a target="_blank" href="https://brave.com/de/download/">Brave Browser</a>.
+            <br>
+            Als nächstes müssen wir den Brave Browser öffnen und einige Einstellungen vornehmen:
+            <ol>
+                <li>Unter <code>brave://flags/#unsafely-treat-insecure-origin-as-secure</code> muss die Adresse dieser Seite hier eingefügt werden.</li>
+                <li>In den Einstellungen muss die <code>Hardware Acceleration</code> angeschaltet werden</li>
+            </ol>
+            Wenn man nun die Seite neu lädt und den Einsatz der Kamera bestätigt wird ein Bild erzeugt. In diesem Bild werden Bewegungen des eigenen
+            Körpers getrackt. Hebt man nun die linke Hand, ertönt eine Klingel.
+        </main>
+    </article>
+
+{% endblock %}

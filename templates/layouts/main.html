@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="de">
+  <head>                                  <!-- Head ist für Metadaten -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.kiddnation.com%2Fwp-content%2Fuploads%2F2015%2F10%2Feggplant-emoji.jpg&f=1&nofb=1" type="image/gif" sizes="16x16">
+    <title>
+      {{ title }}
+    </title>
+  </head>
+  <body>
+    <header>
+       <h1> WS 21/22 Einführung in die Informationstechnik </h1>
+    </header>
+
+    <nav class="Navigation">
+      <ul>
+        <li><a href="/">Startseite</a></li>
+        <li><a href="/Ueberuns">Über uns</a></li>
+        <li><a href="/Das-Projekt">Das Projekt</a></li>
+        <li><a href="/Aus-Dem-Seminar">Aus dem Seminar</a></li>
+      </ul>
+    </nav>
+
+  {% block content %}{% endblock %}         <!-- Nimmt alles was sonst wo zwischen den Blöcken definiert ist genau hier rein -->
+
+  <footer class="Navigation">
+      <ul>
+        <li><a href="/Datenschutz">Datenschutz</a></li>
+        <li><a href="/Impressum">Impressum</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

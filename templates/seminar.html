@@ -1,0 +1,172 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+
+
+    
+
+    <article id="Seminar">    <!-- Artikel vom 12.11.2021 -->
+          <h2> 12.11.21 </h2>
+          <main>
+              Am 12.11.21 bekamen wir den Raspberry PI zum ersten mal ausgeteilt<
+              und durften ihn auch mit nach Hause nehmen.
+              Unsere Aufgabe war ihn so einzurichten,
+              dass sich damit die beigefügten LEDs steuern lassen.
+              Ich steuerte den PI über meinen Desktop-PC via Putty über das Wlan.
+              Der Aufbau zeigt die LED und einen 330 Ohm Widerstand,
+              die beide mit den Pins des PI verbunden sind.
+              Die Anode wird mit Pin 11 verbunden und die Kathode mit Pin 6.
+              Als nächstes öffnere ich im Root-Verzeichnis das Programm nano
+              und erstellte eine Python Datei mit dem Befehl:
+              <code>
+                nano blinkled.py
+              </code>
+              <br>
+              In nano habe ich folgenden Code geschrieben:
+              <br>
+              <codeblock>
+                <span>import</span> RPi.GPIO <span> as </span> GPIO <br><br>
+                GPIO.setmode(GPIO.BOARD) <br><br>
+                GPIO.setup(11,GPIO.OUT)<br>
+                GPUI.output(11,GPIO.LOW)<br><br><br>
+                dauer = 0.5<br><br>
+                <span>for </span> x <span> in </span> range(10):<br>
+                GPIO.output(11,GPIO.HIGH)<br>                       <!-- wie rückt man ein? -->
+                time.sleep(dauer)<br>
+                GPUI.output(11,GPIO.LOW)<br>
+                time.sleep(dauer)<br><br>
+                GPIO.cleanup()<br>
+              </codeblock>
+              <br>
+              Über den Befehl:
+              <code >
+                sudo python blinkled.py
+              </code>
+              ruft man den code nun auf dem Pi auf. <br>
+              Das ist dabei rausgekommen:
+              <br>
+            <div class="video"></div>
+            <iframe
+              width="480"
+              height="360"
+              src="https://www.youtube.com/embed/AtI9aIDWVB0"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+            </div>
+        </main>
+    </article>
+
+    <article id="191121">     <!-- Artikel vom 19.11.2021 -->
+      <h2> 19.11.21 </h2>
+      <main>
+        Unsere heutige Aufgabe war es einen Webserver über den Raspberry Pi zu etablieren.
+        In meinem Netzwerk kann ich über die IP
+          <code> http://192.168.178.41:8000/</code>
+        zugreifen und bekomme folgendes angezeigt: <br><br><br>
+        <div class="center">
+          <img id="BildZoom"
+            src="https://bilderupload.org/image/4f2b05519-unbenannt.png"
+            width="480"
+            title="Bild vong Webserver">
+            <br>
+            Hovern zum vergößern!
+        </div>
+        <br>
+        Ich kann also in meinem eigenen Netz auf meine hier erstellte Seite zugreifen.
+        Damit meine Seite angezeigt wurde, habe ich das Tutorial auf
+        <a target="_blank" href="https://www3.tuhh.de/itbh/einfuehrung-in-die-informationstechnik/einheiten/raspberrypi-aufsetzen/python-server/">Axels Seite</a>
+        befolgt und in den erstellten Ordner auf dem Raspberry Pi meine im Beaker Browser erstellte Seite gespeichert.
+        Dies gelang mir über den SFTP Client WinSCP.
+        <br>
+        Jetzt probiere ich gerade das ganze auch online zu bekommen, damit man von außen zugreifen kann...
+        <a target="_blank" href="95.81.26.93:8000">Hier sollte das mit etwas Glück gehen.</a>
+        Da sich die externe IP immer ändert, funktioniert es gerade nicht.
+      </main>
+    </article>
+
+    <article id="041221">
+      <h2> 03.12.21 </h2>
+        <main>
+          Als erste Einführung in Javascript haben wir eine "Random Planet Facts"-Binde erstellt:
+
+          <h2>Random Planet Facts</h2>
+          <p id="output_p"></p>
+          <script>
+            function main() {
+              const facts = [
+                'Mars is home to the tallest mountain in our solar system.',
+                'Only 18 out of 40 missions to Mars have been successful.',
+                'Pieces of Mars have fallen to Earth.',
+                'One year on Mars is 687 Earth days.',
+                'The temperature on Mars ranges from -153 to 20 °C.',
+                'One year on Mercury is about 88 Earth days.',
+                'The surface temperature of Mercury ranges from -173 to 427°C.',
+                'Mercury was first discovered in 14th century by Assyrian astronomers.',
+                'Your weight on Mercury would be 38% of your weight on Earth.',
+                'A day on the surface of Mercury lasts 176 Earth days.',
+                'The surface temperature of Venus is about 462 °C.',
+                'It takes Venus 225 days to orbit the sun.',
+                'Venus was first discovered by 17th century Babylonian astronomers.',
+                'Venus is nearly as big as the Earth with a diameter of 12,104 km.',
+                "The Earth's rotation is gradually slowing.",
+                'There is only one natural satellite of the planet Earth, the moon.',
+                'Earth is the only planet in our solar system not named after a god.',
+                'The Earth is the densest planet in the solar system.',
+                'A year on Jupiter lasts around 4333 earth days.',
+                'The surface temperature of Jupiter is around -108°C.',
+                'Jupiter was first discovered by 7th or 8th century Babylonian astronomers.',
+                'Jupiter has 4 rings.',
+                'A day on Jupiter lasts 9 hours and 55 minutes.',
+                'Saturn was first discovered by 8th century Assyrians.',
+                'Saturn takes 10756 days to orbit the Sun.',
+                'Saturn can be seen with the naked eye.',
+                'Saturn is the flattest planet.',
+                'Saturn is made mostly of hydrogen.',
+                'Four spacecraft have visited Saturn.',
+                'Uranus was discovered by William Herschel in 1781.',
+                'A year on Uranus takes 30687 earth days.',
+                'Uranus turns on its axis once every 17 hours, 14 minutes.',
+                'With minimum atmospheric temperature of -224°C Uranus is nearly coldest planet in the solar system.',
+                'Only one spacecraft has flown by Uranus, the Voyager 2.',
+                'Neptune was discovered in 1846 by Urbain Le Verrier and Johann Galle.',
+                'Neptune has 14 moons.',
+                'The average temperatue of Neptune is about -201 °C.',
+                'There is a 1:20 million scale model of the solar system in Sweden.',
+                'The gap between the Earth and our moon is bigger than the diameters of all the planets combined.',
+                "The first accurate calculation of the speed of light was using Jupiter's moons",
+                "Jupiter's magnetic field is believed to be a result of rapidly spinning metallic hydrogen at the core, and is ~10x stronger than the Earth's.",
+                'Venus spins backwards.',
+                'Uranus spins sideways, relative to the ecliptic plane of the solar system.',
+              ]
+              document.querySelector('#output_p').innerHTML = //.innerHTML überschreibt output_p oben im Paragraf <p>
+                facts[Math.floor(Math.random() * facts.length)]
+            }
+          </script>
+          Wenn die Seite nun neu geladen wird, erscheint ein anderer Fakt.
+          <br>
+          Würde ich nun:
+          <code>
+           &lt;meta http-equiv="refresh" content="5"/&gt;
+          </code>       <!-- code nochmal überarbeiten. Das sieht kacke aus. Evtl code2 ? -->
+           in den Head setzen würde, würde sich die Seite alle 5 Sekunden aktualisieren und somit
+          auch die Planetenfakten. In der Realität hat sich das als sehr nervig herausgestellt.
+            Aus einem mir unerfindlichen Grund lädt er die RandomPlanetFacts in Flask nicht,
+            obwohl das gleiche Setup in Beaker funktioniert
+        </main>
+    </article>
+
+    <article id="10122021">
+        <h2>10.12.2021</h2>
+        <main>
+            <h3 style="text-align: center">Der große Umbau!</h3>
+            Heute haben wir uns daran gemacht, die statischen Elemente unserer Seite über Flask zu erzeugen. Dies bedeutete einen
+            großen Umbau für mich, da ich die Templates bisher immer aus einer eigenen "default.html" kopiert habe. Durch die Einbindung
+            von Python und Flask bleibt mir dieser Schritt in Zukunft erspart, da ich mein standard Layout nun als Template gespeichert habe,
+            welches ich in jeder weiteren Seite über einen extend Befehl aufrufe. Außerdem ist es nun möglich dynamische Webseiten zu erstellen.
+            Erste schritte unternehme ich <a href="/test">hier</a>.
+        </main>
+    </article>
+
+{% endblock %}

@@ -1,0 +1,243 @@
+
+  header
+    {
+        
+    }
+
+  h1                                                    /* Selektor */
+  {
+    float: left;                                        /* Anweisungsblock */
+    color: white;                                       /* Deklaration: Eigenschaft/Wert */
+    margin-top: 10px;
+    margin-left: 100px;
+    padding-left: 5px;
+  }
+
+  body                                                  /* Body und die ganzen andren Dinger sind Elemente */
+  {
+    /* background-color: rgb(116, 116, 243); */
+    object-fit: fill;
+      /*background-image: url(https://www.master-and-more.de/fileadmin/user_upload/Fachbereiche-Studiengaenge/Information_und_Telekommunikation/Medientechnik_2.jpg);*/
+      /* background-image:  url(https://cdn.pixabay.com/photo/2020/02/19/07/54/web-4861612_1280.jpg); */
+    background-image: url(https://cdn.pixabay.com/photo/2020/02/15/14/33/network-4851120_1280.jpg); 
+    background-attachment: fixed;                       /* Hintergrund scrollt nicht mit */
+    background-size: cover;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  nav
+  {
+    text-align:right;
+    margin-right: 100px;
+    margin-left: 85px;
+  }
+
+  nav ul                                                /* nav + ul = nur wenn beide Fälle zutreffen, greift CSS */
+  {
+    background-color: rgba(22 22 145 / 80%);
+    padding: 1em;                                       /* Höhe des Fensters */
+  }
+
+  nav li
+    {
+      background-color: rgb(0,0,0,0.5);
+      display: inline-block;                            /* Richtet Liste horizontal aus */
+    }
+
+  #Seminar li                                           /* ID */
+  {
+    display: inline-block;
+  }
+
+  nav a
+    {
+      padding: .2em 1em;                                /* Höhe des Fensters + Breite des Fensters */
+      display: inline-block;
+      text-decoration: none;                            /* Entfernt Unterstriche der Links */
+    }
+
+  nav a:hover                                           /* Sobald die Maus die Box berührt (inkl. vergebenen Innenabstand) wird CSS darauf reagieren */
+    {
+    /*  background-color: darkred; */                   /* Hover über a -> nimmt Farbe an */
+      text-decoration: underline;
+      color: white;
+    }
+
+  .Navigation a:hover                                   /* Klasse */
+  {
+    color: white;
+  }
+
+  article
+  {
+    background-color: rgba(22 22 145 / 80%);
+    padding-top: 20px;
+    padding-left: 20px; 
+    padding-bottom: 20px;
+    margin-right: 100px;
+    margin-left: 85px;
+    margin-top: 20px;
+  }
+
+  main  /* sollte kasten in article erzeugen */
+  {
+    background-color: black;
+    opacity: 80%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-right: 100px;
+    margin-left: 85px;
+    margin-top: 20px;
+  }
+
+  article h2
+  {
+    text-align: center;
+  }
+
+  #output_p
+  {
+    margin: 15px auto;
+    max-width: 650px;
+    line-height: 1.2;
+    font-family: sans-serif;
+    font-size: 2em;
+    color: #fff;
+    background: #444;
+  }
+
+  .canvas
+  {
+    background-color: rgba(22 22 145 / 100%)
+  }
+
+  #canvas
+  {
+    background-color: rgb(0,0,0,80%);
+  }
+
+  #seminar
+  {
+    
+  }
+
+  footer ul                                             
+  {
+    text-align: center;
+   /* background-color: rgba(3, 94, 197, 0.7); */
+    padding: 1em;       
+    margin-right: 100px;
+    margin-left: 85px;                                  
+  }
+
+  footer li
+  {
+    background-color: rgb(0,0,0,0.5);
+    display: inline-block;                      
+
+  }
+
+  footer a
+  {
+    padding: .2em 1em;                               
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  footer a:hover 
+  {
+    text-decoration: underline;
+    color: white;
+  }
+
+  a:link
+  {
+    color: white;
+  }
+
+  a:hover
+  {
+    color: orange;
+  }
+
+  a:visited               /* habe weiß gewählt, weil das Default fürchterlich aussieht */
+  {
+    color: white;
+    text-decoration: none
+  }
+
+  a:visited:hover
+  {
+    color: orange;
+  }
+
+  figure
+    {
+      
+    }
+  
+  codeblock                                       /* das muss auch schöner gehen. */
+    {
+      margin: auto;
+      color: black;
+      display:block;                                /* für die Block Optik */
+      border:3px solid;
+      padding:5px; 
+      width: 220px;                                 /* die Breite des Blocks */
+      background-color: rgb(197, 197, 197);
+      border: 2px inset;
+    }
+
+  iframe
+  {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+  span
+    {
+      font-weight: bold;                            /* macht schrift Fett */
+      color: rgb(19, 4, 233);
+    }
+/*
+.gridcontainer                                      /* der dann eigenlich doch ein flexcontainer ist */
+{
+  display: flex;
+  grid-template-columns: 150px 150px;
+  grid-template-rows: 150px;
+}
+
+  #BildZoom:hover
+  {
+    width: 1290px;
+    background-position: 0 0px;
+  }
+
+  .center
+  {
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  #diesdas    /* Das hier ist nur um das mit den IDs aus dem Glossar zu testen. */ 
+  {
+    color: red;
+  }

@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+
+<article>
+
+
+        {% if name == None or name == "" or age == "" or age == None: %}      <!-- None = leeres Feld, "" = leerer String-->
+            <form method="get">
+            <!-- form = formular. get will irgendwas... bin mir noch nicht sicher -->
+                <label for="name">Gib deinen Namen ein:</label>
+                <br>
+                <input type="text" name="name" id="name"/>
+                <!-- input erzeugt ein eingabefeld vom typ text, dass einen Namen entgegen nimmt
+                Das erste name ist ein HTML Typ und das name in der Klammer steht für die Variable name
+                die Variable könnte z.b. auch age sein oder sowas
+                Die ID ist sagt dem Label auf welches Eingabefeld es sich bezieht
+                value ist quasi der Default, der im Textfeld angezeigt wird
+                ich könnte hier auch name in eckigen Klammern in value eingeben, dann merkt er sich das,
+                was man vorher eingegeben hat. Dazu muss eine komplette python if abfrage in den value, da sonst None
+                da stehen würde.-->
+                <br>
+                <br>
+                <label for="age">Wie alt bist du?:</label>
+                <br>
+                <input type="number" name="age" id="age" />
+                <br>
+                <br>
+                 <input type="submit" value="Formular abschicken!"/>
+                <!-- erzeugt button (?) zum Formular abschicken -->
+
+             </form>
+        {% else %}
+
+            Moin {{ name }}! <!-- wird über URL an run.py übergeben und dort in {{ name }} gespeichert -->
+            <br>
+            <br>
+            die folgenden Textfelder sind nur dazu da, um die Parameterübergabe zu testen:
+            <br>
+            <br>
+                    <form method="get">
+                        <label for="name">Gib deinen Namen ein:</label>
+                        <br>
+                        <input type="text" name="name" id="name" value="{% if name != None: %}{{ name }}{% endif %}"/>
+                        <br>
+                        <br>
+                        <label for="age">Wie alt bist du?:</label>
+                        <br>
+                        <input type="number" name="age" id="age" value="{% if age != None: %}{{ age }}{% endif %}"/>
+                        <br>
+                        <br>
+                         <input type="submit" value="Formular abschicken!"/>
+                    </form>
+
+        {% endif %}
+
+</article>
+
+{% endblock %}
